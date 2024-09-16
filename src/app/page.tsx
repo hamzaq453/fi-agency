@@ -1,6 +1,5 @@
 import About from "./components/About";
 import Brands from "./components/Brands";
-import Brands2 from "./components/Brands2";
 import Contact from "./components/Contact";
 import HeroSection from "./components/Hero";
 import Navbar from "./components/Navbar";
