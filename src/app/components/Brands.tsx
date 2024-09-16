@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Logo from '../../../public/Logo.jpg';
 import BrandZA from '../../../public/BrandZA.png';
 import BrandOXO from '../../../public/BrandOXO.jpg';
 import BrandRC from '../../../public/BrandRC.jpg';
