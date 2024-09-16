@@ -62,9 +62,13 @@ const config: Config = {
           '0%': { transform: 'translateY(50px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        scrollX: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },  // Shift by 100% (since you are duplicating logos)
+        },
       },
       animation: {
-        slideIn: 'slideIn 1s ease-out forwards',
+        'scroll-x': 'scrollX 70s linear infinite',  // Adjust the duration (30s) for scroll speed as needed
       },
     },
   },

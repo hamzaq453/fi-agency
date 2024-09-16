@@ -17,7 +17,7 @@ const QuoteFormModal = ({ isOpen, onClose }:any) => {
         </div>
         <div className="p-2 h-5/6">
           <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSeFVb-FhQ4uU3umc-OU11TigpsprYKyQkUJqrVgW5hARo8yZA/viewform?embedded=true"
+            src="https://surveyheart.com/form/66d958f6ecd7cf645b0b560b"
             className="w-full h-full"
             width={640}
             height={986}

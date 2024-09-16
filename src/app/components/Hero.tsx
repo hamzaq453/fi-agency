@@ -28,7 +28,7 @@ export default function HeroSection() {
     return (
         <section className="bg-white mb-14 p-6">
             <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center px-4 sm:px-6 lg:px-16">
-                <div className={`lg:w-1/2 mt-8 lg:mt-0 transition-all duration-1000 ease-out transform ${textVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
+                <div className={`lg:w-1/2 mt-8 lg:-mt-20 transition-all duration-1000 ease-out transform ${textVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight transition-transform transform hover:scale-105 duration-300">
                         Exploring Innovative Paths to Cultivate Your Business
                     </h1>

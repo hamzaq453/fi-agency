@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import QuoteFormModal from "./QuoteFormModal";
+import Image from 'next/image';
+import Logo from '../../../public/Logo.jpg'
 
 const Links = [
     { name: 'Home', href: '/' },
@@ -23,12 +25,11 @@ const closeModal = () => {
          };
 return (
         <>
-            <header className="mb-8 border-b border-gray-300 py-4 shadow-lg">
+            <header className="mb-8 border-b border-gray-300 py-0 shadow-lg">
                 <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
                     <Link href="#home">
-                        <h1 className="text-2xl md:text-4xl font-bold text-slate-600">Fi
-                            <span className="text-red-500"> Agency</span>
-                        </h1>
+                    <Image src={Logo} alt={'Logo'} className='w-50 h-[70px]'/>
+
                     </Link>
 
                     <div className="flex-1 flex justify-center">
@@ -45,7 +46,7 @@ return (
                         </nav>
                     </div>
                     <div>
-                        <Button className="transform bg-slate-700 transition duration-500 hover:scale-110 hover:bg-red-600" onClick={openModal}>
+                        <Button className="transform bg-red-600 transition duration-500 hover:scale-110 hover:bg-red-600" onClick={openModal}>
                             Get A Quote
                         </Button>
                     </div>

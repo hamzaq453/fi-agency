@@ -1,4 +1,6 @@
 import About from "./components/About";
+import Brands from "./components/Brands";
+import Brands2 from "./components/Brands2";
 import Contact from "./components/Contact";
 import HeroSection from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -21,6 +23,9 @@ export default function Home() {
             </section>
             <section id="contact" className="min-h-screen flex items-center justify-center">
                 <Contact />
+            </section>
+            <section>
+              <Brands />
             </section>
         </div>
     </main>
