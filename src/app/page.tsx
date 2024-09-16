@@ -20,11 +20,12 @@ export default function Home() {
             <section id="about" className="min-h-screen flex items-center justify-center">
                 <About/>
             </section>
-            <section id="contact" className="min-h-screen flex items-center justify-center">
-                <Contact />
-            </section>
             <section>
               <Brands />
+            </section>
+            
+            <section id="contact" className="min-h-screen flex items-center justify-center">
+                <Contact />
             </section>
         </div>
     </main>
