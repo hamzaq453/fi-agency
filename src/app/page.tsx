@@ -3,6 +3,7 @@ import Brands from "./components/Brands";
 import Contact from "./components/Contact";
 import HeroSection from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Quicklinks from "./components/Quicklinks";
 import Services from "./components/Services";
 
 
@@ -26,6 +27,10 @@ export default function Home() {
             
             <section id="contact" className="min-h-screen flex items-center justify-center">
                 <Contact />
+            </section>
+
+            <section>
+                <Quicklinks/>
             </section>
         </div>
     </main>

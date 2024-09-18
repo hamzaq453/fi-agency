@@ -5,6 +5,7 @@ import WebDevelopmentIcon from '../../../public/WEBDEV.png';
 import GraphicDesigningIcon from '../../../public/GD.png';
 import SocialMediaManagementIcon from '../../../public/SMM.png';
 import VideoAdsIcon from '../../../public/VideoAds.jpg'
+import Link from 'next/link';
 
 export default function Services() {
     const services = [
@@ -12,7 +13,7 @@ export default function Services() {
             title: 'Digital Marketing',
             description: 'Boost your online presence with our expert digital marketing strategies.',
             icon: DigitalMarketingIcon,
-            link: "/dmdetails"
+            link: "/dm"
         },
         {
             title: 'Web Development',
@@ -55,9 +56,9 @@ export default function Services() {
                             </div>
                             <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                             <p className="text-gray-700 mb-4">{service.description}</p>
-                            {/* <Link href={service.link}>
+                            <Link href={service.link}>
                                 <p className="text-red-500 font-bold transition-colors hover:text-red-700">Learn More</p>
-                            </Link> */}
+                            </Link>
                         </div>
                     ))}
                 </div>
