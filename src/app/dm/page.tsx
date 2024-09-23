@@ -109,27 +109,26 @@ export default function DigitalMarketingDetail() {
                             </div>
                         </div>
                     </div>
-                     {/* Testimonials Section */}
-                     <div className="mt-16">
-                        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">What Our Clients Say</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {/* Testimonial 1 */}
-                            <div className="bg-white p-6 rounded-lg shadow-lg">
-                                <p className="text-gray-700 italic mb-4">
-                                    "Working with Fi Agency has been a game changer for our business. Their SEO strategies helped us rank on the first page of Google, and we have seen a noticeable increase in traffic and conversions."
-                                </p>
-                                <p className="text-gray-900 font-bold">- Sarah, CEO of XYZ Company</p>
-                            </div>
-
-                            {/* Testimonial 2 */}
-                            <div className="bg-white p-6 rounded-lg shadow-lg">
-                                <p className="text-gray-700 italic mb-4">
-                                    "Their social media marketing team is outstanding! We have gained thousands of new followers and seen a massive engagement boost thanks to their creative content strategies."
-                                </p>
-                                <p className="text-gray-900 font-bold">- James, Marketing Director at ABC Inc.</p>
-                            </div>
-                        </div>
-                    </div>
+           {/* Testimonials Section */}
+<div className="mt-16">
+  <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">What Our Clients Say</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {/* Testimonial 1 */}
+    <div className="bg-white p-6 rounded-lg shadow-lg">
+      <p className="text-gray-700 italic mb-4">
+        "Working with Fi Agency has been a game changer for our business. Their SEO strategies helped us rank on the first page of Google, and we have seen a noticeable increase in traffic and conversions."
+      </p>
+      <p className="text-gray-900 font-bold">- Sarah, CEO of XYZ Company</p>
+    </div>
+    {/* Testimonial 2 */}
+    <div className="bg-white p-6 rounded-lg shadow-lg">
+      <p className="text-gray-700 italic mb-4">
+        {"Their social media marketing team is outstanding! We have gained thousands of new followers and seen a massive engagement boost thanks to their creative content strategies."} {/* Option 2: Wrap in curly braces */}
+      </p>
+      <p className="text-gray-900 font-bold">- James, Marketing Director at ABC Inc</p> {/* Option 1: Escape the ending quote */}
+    </div>
+  </div>
+</div>
 
                     {/* Call to Action Section */}
                     <div className="mt-16 text-center">
