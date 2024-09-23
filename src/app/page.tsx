@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
        <div>
-            <Navbar/>
+            
             <section id="hero" className="min-h-screen flex items-center justify-center">
             <HeroSection />
             </section>
@@ -27,10 +27,6 @@ export default function Home() {
             
             <section id="contact" className="min-h-screen flex items-center justify-center">
                 <Contact />
-            </section>
-
-            <section>
-                <Quicklinks/>
             </section>
         </div>
     </main>
