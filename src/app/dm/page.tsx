@@ -116,7 +116,7 @@ export default function DigitalMarketingDetail() {
     {/* Testimonial 1 */}
     <div className="bg-white p-6 rounded-lg shadow-lg">
       <p className="text-gray-700 italic mb-4">
-        "Working with Fi Agency has been a game changer for our business. Their SEO strategies helped us rank on the first page of Google, and we have seen a noticeable increase in traffic and conversions."
+        {"Working with Fi Agency has been a game changer for our business. Their SEO strategies helped us rank on the first page of Google, and we have seen a noticeable increase in traffic and conversions."}
       </p>
       <p className="text-gray-900 font-bold">- Sarah, CEO of XYZ Company</p>
     </div>
