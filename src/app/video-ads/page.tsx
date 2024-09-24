@@ -43,7 +43,7 @@ export default function VideoAdsDetail() {
                                 Video Ads
                             </h1>
                             <p className="text-lg sm:text-xl text-gray-700 mb-6">
-                                Engage your audience with high-quality, impactful video ads. Whether you're launching a product or boosting brand awareness, our tailored video ad solutions will drive results.
+                                Engage your audience with high-quality, impactful video ads. Whether you&rsquo;re launching a product or boosting brand awareness, our tailored video ad solutions will drive results.
                             </p>
                         </div>
                         <div className="lg:w-1/2 flex justify-center lg:justify-end">
