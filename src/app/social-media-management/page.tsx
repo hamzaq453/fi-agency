@@ -43,7 +43,7 @@ export default function SocialMediaManagementDetail() {
                                 Social Media Management
                             </h1>
                             <p className="text-lg sm:text-xl text-gray-700 mb-6">
-                                Grow your brand's online presence with targeted social media strategies. We manage your social platforms to engage your audience and drive meaningful interactions.
+                                {"Grow your brand's online presence with targeted social media strategies. We manage your social platforms to engage your audience and drive meaningful interactions."}
                             </p>
                         </div>
                         <div className="lg:w-1/2 flex justify-center lg:justify-end">
@@ -79,7 +79,7 @@ export default function SocialMediaManagementDetail() {
                 Content Creation & Curation
             </h3>
             <p className="text-white font-light text-lg mb-4">
-                We create and curate engaging, shareable content that resonates with your audience and aligns with your brand’s message.
+                {"We create and curate engaging, shareable content that resonates with your audience and aligns with your brand’s message."}
             </p>
         </div>
 
@@ -129,7 +129,7 @@ export default function SocialMediaManagementDetail() {
 
                     {/* Call to Action Section */}
                     <div className="mt-16 text-center">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6">Let’s Elevate Your Social Media Presence</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-6">{"Let’s Elevate Your Social Media Presence"}</h2>
                         <p className="text-lg text-gray-700 mb-6">
                             Ready to boost your brand’s visibility and engage with your audience? Contact us today to get started with our social media management services.
                         </p>

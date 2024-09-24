@@ -43,7 +43,7 @@ export default function WebDevelopmentDetail() {
                                 Web Development
                             </h1>
                             <p className="text-lg sm:text-xl text-gray-700 mb-6">
-                                We design and develop custom websites that are visually appealing, user-friendly, and optimized for performance. Whether you're a startup or an enterprise, our team can build solutions tailored to your needs.
+                                {"We design and develop custom websites that are visually appealing, user-friendly, and optimized for performance. Whether you're a startup or an enterprise, our team can build solutions tailored to your needs."}
                             </p>
                         </div>
                         <div className="lg:w-1/2 flex justify-center lg:justify-end">

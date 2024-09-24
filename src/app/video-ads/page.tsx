@@ -129,8 +129,8 @@ export default function VideoAdsDetail() {
 
                 {/* Call to Action Section */}
                 <div className="mt-16 text-center">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Let’s Create Your Next Video Ad</h2>
-                    <p className="text-lg text-gray-700 mb-6">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Let&rsquo;s Create Your Next Video Ad</h2>
+                <p className="text-lg text-gray-700 mb-6">
                         Ready to captivate your audience with powerful video ads? Contact us today to discuss your video ad needs.
                     </p>
                     <Button onClick={openModal} className="lg:px-12 lg:py-7 sm:px-12 py-2 sm:py-3 transform bg-red-600 text-white font-bold text-lg transition duration-500 hover:scale-110 hover:bg-red-600">
