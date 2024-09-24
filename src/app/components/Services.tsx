@@ -13,13 +13,13 @@ export default function Services() {
             title: 'Digital Marketing',
             description: 'Boost your online presence with our expert digital marketing strategies.',
             icon: DigitalMarketingIcon,
-            link: "/dm"
+            link: "/digital-marketing"
         },
         {
             title: 'Web Development',
             description: 'Get a stunning website that’s fast, secure, and easy to manage.',
             icon: WebDevelopmentIcon,
-            link: "/webDev"
+            link: "/web-development"
         },
         {
             title: 'Social Media Management',

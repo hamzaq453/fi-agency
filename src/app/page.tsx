@@ -12,22 +12,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between ">
        <div>
             
-            <section id="hero" className="min-h-screen flex items-center justify-center">
-            <HeroSection />
-            </section>
-            <section id="services" className="min-h-screen flex items-center justify-center">
+                <HeroSection />
                 <Services />
-            </section>
-            <section id="about" className="min-h-screen flex items-center justify-center">
                 <About/>
-            </section>
-            <section>
-              <Brands />
-            </section>
-            
-            <section id="contact" className="min-h-screen flex items-center justify-center">
+                <Brands />
                 <Contact />
-            </section>
         </div>
     </main>
   );

@@ -21,7 +21,7 @@ export default function Brands() {
           >
             {/* Logos */}
             <div className="flex gap-8 justify-center flex-wrap">
-              <div className="bg-white p-4 shadow-lg rounded-lg border border-gray-200 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]">
+              <div className="bg-white p-4 shadow-lg rounded-lg border border-gray-400 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]">
                 <Image
                   src={BrandCreateMax}
                   alt="Peet's Coffee"
@@ -31,7 +31,7 @@ export default function Brands() {
                   style={{ objectFit: 'contain' }}
                 />
               </div>
-              <div className="bg-white p-4 shadow-lg rounded-lg border border-gray-200 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]">
+              <div className="bg-white p-4 shadow-lg rounded-lg border border-gray-400 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]">
                 <Image
                   src={BrandRC}
                   alt="Polymath"
@@ -41,7 +41,7 @@ export default function Brands() {
                   style={{ objectFit: 'contain' }}
                 />
               </div>
-              <div className="bg-white p-4 shadow-lg rounded-lg border border-gray-200 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]">
+              <div className="bg-white p-4 shadow-lg rounded-lg border border-gray-400 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]">
                 <Image
                   src={BrandWH}
                   alt="Lever"
@@ -51,7 +51,7 @@ export default function Brands() {
                   style={{ objectFit: 'contain' }}
                 />
               </div>
-              <div className="bg-white p-4 shadow-lg rounded-lg border border-gray-200 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]">
+              <div className="bg-white p-4 shadow-lg rounded-lg border border-gray-400 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]">
                 <Image
                   src={BrandOXO}
                   alt="Salesforce"
@@ -61,7 +61,7 @@ export default function Brands() {
                   style={{ objectFit: 'contain' }}
                 />
               </div>
-              <div className="bg-white p-4 shadow-lg rounded-lg border border-gray-200 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]">
+              <div className="bg-white p-4 shadow-lg rounded-lg border border-gray-400 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]">
                 <Image
                   src={BrandZA}
                   alt="Bluehost"

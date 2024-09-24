@@ -27,7 +27,7 @@ return (
         <>
             <header className="mb-8 border-b border-gray-300 py-0 shadow-lg">
                 <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
-                    <Link href="#home">
+                    <Link href="/">
                     <Image src={Logo} alt={'Logo'} className='w-50 h-[70px]'/>
 
                     </Link>
