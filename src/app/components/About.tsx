@@ -1,51 +1,72 @@
-import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
-import Abt1 from "../../../public/Abt1.png";
-import Abt2 from "../../../public/Abt 2.png";
-import Abt3 from "../../../public/Abt 3.png";
+import { FaBullseye, FaRocket, FaChartLine, FaHandshake } from 'react-icons/fa';
 
 export default function About() {
     return (
-        <section id="about" className="py-16">
-            <div className="container mx-auto text-center px-4 sm:px-6 lg:px-16">
-                <h2 className="text-4xl font-bold text-gray-900 mb-8">About Us</h2>
-                <p className="text-lg text-gray-700 mb-8">
-                    At Fi Agency, we are dedicated to transforming your vision into reality. Our team of experts specializes in digital marketing, web development, graphic design, branding, and social media management.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div className="bg-gray-200 p-6 rounded-lg shadow-lg border-2 border-transparent transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:border-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:-translate-y-2 hover:rotate-1">
-                        <div className="flex justify-center mb-4">
-                            <div className="w-20 h-20">
-                                <Image src={Abt1} alt='Our Mission' className='rounded-sm'/>
-                            </div>
-                        </div>
-                        <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h3>
-                        <p className="text-gray-700 font-normal">
-                            Our mission is to deliver innovative solutions that drive success and growth for our clients. We strive to exceed expectations through our dedication and expertise.
+        <section id="about" className="py-20 bg-white">
+            <div className="container mx-auto px-8 lg:px-16">
+                {/* Section Header */}
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4">About Us</h2>
+                    <h3 className="text-2xl sm:text-3xl font-semibold text-red-500">Unlocking Your Online Potential</h3>
+                </div>
+
+                {/* Content */}
+                <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-16">
+                    {/* Left Side - About Text */}
+                    <div className="lg:w-1/2 text-gray-600 space-y-6">
+                        <p className="text-lg leading-relaxed">
+                            FI Marketing Agency offers comprehensive marketing solutions, creative campaigns, and innovative strategies to boost brand awareness and drive measurable results. With a deep expertise in digital technologies and multi-channel advertising, we engage audiences and elevate businesses' online presence effectively.
+                        </p>
+                        <p className="text-lg leading-relaxed">
+                            Our mission is to turn your vision into reality by employing strategies that align with your unique brand goals, ensuring a meaningful impact in your industry.
                         </p>
                     </div>
-                    <div className="bg-gray-200 p-6 rounded-lg shadow-lg border-2 border-transparent transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:border-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:-translate-y-2 hover:rotate-1">
-                        <div className="flex justify-center mb-4">
-                            <div className="w-20 h-20">
-                                <Image src={Abt2} alt='Our Vision' className='rounded-sm'/>
+
+                    {/* Right Side - Points with Icons */}
+                    <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div className="flex items-center space-x-4 p-4 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
+                            <FaRocket className="text-red-500 text-4xl" />
+                            <div>
+                                <h4 className="font-semibold text-gray-800">Strategic Visionaries</h4>
+                                <p className="text-sm text-gray-500">We craft visionary strategies that propel your brand forward.</p>
                             </div>
                         </div>
-                        <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Vision</h3>
-                        <p className="text-gray-700 font-normal">
-                            We envision a world where businesses of all sizes can leverage the power of digital transformation to achieve their full potential and create lasting impact.
-                        </p>
-                    </div>
-                    <div className="bg-gray-200 p-6 rounded-lg shadow-lg border-2 border-transparent transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:border-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:-translate-y-2 hover:rotate-1">
-                        <div className="flex justify-center mb-4">
-                            <div className="w-20 h-20">
-                                <Image src={Abt3} alt='Our Values' className='rounded-sm'/>
+
+                        <div className="flex items-center space-x-4 p-4 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
+                            <FaBullseye className="text-red-500 text-4xl" />
+                            <div>
+                                <h4 className="font-semibold text-gray-800">Results-Driven Approach</h4>
+                                <p className="text-sm text-gray-500">Our focus is on achieving measurable results for every campaign.</p>
                             </div>
                         </div>
-                        <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Values</h3>
-                        <p className="text-gray-700 font-normal">
-                            We believe in integrity, innovation, and collaboration. Our values guide us in building strong relationships with our clients and delivering exceptional results.
-                        </p>
+
+                        <div className="flex items-center space-x-4 p-4 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
+                            <FaChartLine className="text-red-500 text-4xl" />
+                            <div>
+                                <h4 className="font-semibold text-gray-800">Multi-Channel Mastery</h4>
+                                <p className="text-sm text-gray-500">Expertise across various platforms to maximize brand reach.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center space-x-4 p-4 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
+                            <FaHandshake className="text-red-500 text-4xl" />
+                            <div>
+                                <h4 className="font-semibold text-gray-800">Client-Centric Collaboration</h4>
+                                <p className="text-sm text-gray-500">We prioritize strong, collaborative partnerships with our clients.</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                {/* Call to Action Button */}
+                <div className="text-center mt-16">
+                    <Link href="https://calendly.com/ceofimarketing/meeting">
+                        <button className="bg-red-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-red-600 transition duration-200">
+                            Get Free Consultation Now
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>
