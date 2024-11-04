@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import HeroImg from "../../../public/Hero1.png";
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import QuoteFormModal from './QuoteFormModal';
 import Link from 'next/link';
 
 export default function HeroSection() {
