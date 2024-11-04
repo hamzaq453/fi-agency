@@ -17,7 +17,7 @@ export default function About() {
                     {/* Left Side - About Text */}
                     <div className="lg:w-1/2 text-gray-600 space-y-6">
                         <p className="text-lg leading-relaxed">
-                            FI Marketing Agency offers comprehensive marketing solutions, creative campaigns, and innovative strategies to boost brand awareness and drive measurable results. With a deep expertise in digital technologies and multi-channel advertising, we engage audiences and elevate businesses' online presence effectively.
+                            FI Marketing Agency offers comprehensive marketing solutions, creative campaigns, and innovative strategies to boost brand awareness and drive measurable results. With a deep expertise in digital technologies and multi-channel advertising, we engage audiences and elevate businesses&apos; online presence effectively.
                         </p>
                         <p className="text-lg leading-relaxed">
                             Our mission is to turn your vision into reality by employing strategies that align with your unique brand goals, ensuring a meaningful impact in your industry.
