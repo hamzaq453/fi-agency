@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi"; 
 
 interface SliderRef extends HTMLDivElement {
   touchStartX?: number;
@@ -62,7 +63,7 @@ export default function Brands() {
     setStartIndex((prevIndex) => Math.max(prevIndex - itemsPerPage, 0));
   };
 
-  // Touch swipe logic for mobile (React.TouchEvent type)
+  // Touch swipe logic for mobile
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     if (sliderRef.current) {
       sliderRef.current.touchStartX = e.touches[0].clientX;
@@ -72,9 +73,9 @@ export default function Brands() {
   const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
     if (sliderRef.current && sliderRef.current.touchStartX !== undefined) {
       const deltaX = e.changedTouches[0].clientX - sliderRef.current.touchStartX;
-      if (deltaX > 50) handlePrev(); // Swipe right
-      if (deltaX < -50) handleNext(); // Swipe left
-      sliderRef.current.touchStartX = undefined; // Reset touchStartX
+      if (deltaX > 50) handlePrev();
+      if (deltaX < -50) handleNext();
+      sliderRef.current.touchStartX = undefined;
     }
   };
 
@@ -85,26 +86,26 @@ export default function Brands() {
           <h2 className="text-2xl font-bold">We Have Driven Impact At</h2>
         </div>
 
-        {/* Arrows */}
+        {/* Arrows for mobile devices */}
         {startIndex > 0 && (
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden sm:block bg-gray-800 text-white px-3 py-2 rounded-full shadow-md hover:bg-gray-600"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 block sm:hidden text-black text-3xl"
           >
-            &#8592;
+            <BiChevronLeft />
           </button>
         )}
 
         {startIndex + itemsPerPage < brands.length && (
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden sm:block bg-gray-800 text-white px-3 py-2 rounded-full shadow-md hover:bg-gray-600"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 block sm:hidden text-black text-3xl"
           >
-            &#8594;
+            <BiChevronRight />
           </button>
         )}
 
-        {/* Logos with touch events */}
+        {/* Logos */}
         <div
           ref={sliderRef}
           onTouchStart={handleTouchStart}
