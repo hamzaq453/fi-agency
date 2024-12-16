@@ -30,7 +30,6 @@ const brands = [
 ];
 
 
-
 export default function Brands() {
   const [startIndex, setStartIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(5);
@@ -86,48 +85,51 @@ export default function Brands() {
           <h2 className="text-2xl font-bold">We Have Driven Impact At</h2>
         </div>
 
-        {/* Arrows for mobile devices */}
-        {startIndex > 0 && (
-          <button
-            onClick={handlePrev}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 block sm:hidden text-black text-3xl"
-          >
-            <BiChevronLeft />
-          </button>
-        )}
+        <div className="relative flex items-center justify-center gap-2">
+          {/* Left Cursor */}
+          {startIndex > 0 && (
+            <button
+              onClick={handlePrev}
+              className="absolute  left-0 lg:left-4 top-1/2 transform -translate-y-1/2 text-black text-3xl lg:text-4xl z-10 mr-2"
+            >
+              <BiChevronLeft className='sm:-ml-4 lg:ml-0'/>
+            </button>
+          )}
 
-        {startIndex + itemsPerPage < brands.length && (
-          <button
-            onClick={handleNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 block sm:hidden text-black text-3xl"
+          {/* Logos */}
+          <div
+            ref={sliderRef}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            className="flex gap-4  items-center justify-center overflow-hidden"
           >
-            <BiChevronRight />
-          </button>
-        )}
+            {brands
+              .slice(startIndex, startIndex + itemsPerPage)
+              .map((brand, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-4 shadow-lg rounded-lg border border-gray-400 flex items-center justify-center w-[120px] h-[80px] sm:w-[160px] sm:h-[90px] md:w-[200px] md:h-[100px]"
+                >
+                  <Image
+                    src={brand.src}
+                    alt={brand.alt}
+                    width={brand.width}
+                    height={brand.height}
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+          </div>
 
-        {/* Logos */}
-        <div
-          ref={sliderRef}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-          className="flex gap-4 items-center justify-center overflow-hidden"
-        >
-          {brands
-            .slice(startIndex, startIndex + itemsPerPage)
-            .map((brand, index) => (
-              <div
-                key={index}
-                className="bg-white p-4 shadow-lg rounded-lg border border-gray-400 flex items-center justify-center w-[120px] h-[80px] sm:w-[160px] sm:h-[90px] md:w-[200px] md:h-[100px]"
-              >
-                <Image
-                  src={brand.src}
-                  alt={brand.alt}
-                  width={brand.width}
-                  height={brand.height}
-                  className="object-contain"
-                />
-              </div>
-            ))}
+          {/* Right Cursor */}
+          {startIndex + itemsPerPage < brands.length && (
+            <button
+              onClick={handleNext}
+              className="absolute right-0 lg:right-4 top-1/2 transform -translate-y-1/2 text-black text-3xl lg:text-4xl z-10 ml-2"
+            >
+              <BiChevronRight className='sm:-mr-4 lg:mr-0'/>
+            </button>
+          )}
         </div>
       </div>
     </section>
