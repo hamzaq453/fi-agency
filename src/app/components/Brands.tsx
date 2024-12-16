@@ -1,6 +1,10 @@
 "use client";
-import React, { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+
+interface SliderRef extends HTMLDivElement {
+  touchStartX?: number;
+}
 
 // Array of logos with width and height for each
 const brands = [
@@ -24,74 +28,105 @@ const brands = [
   { src: '/Brand18.png', alt: 'Brand 18', width: 90, height: 60 },
 ];
 
+
+
 export default function Brands() {
-  const [startIndex, setStartIndex] = useState(0); // Tracks the current start index of visible logos
-  const itemsPerPage = 5; // Number of logos to show per slide
+  const [startIndex, setStartIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
+  const sliderRef = useRef<SliderRef | null>(null);
+
+  // Adjust itemsPerPage based on screen size
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerPage(2);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerPage(3);
+      } else {
+        setItemsPerPage(5);
+      }
+    };
+
+    updateItemsPerPage();
+    window.addEventListener("resize", updateItemsPerPage);
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
 
   const handleNext = () => {
-    // Move to the next page, ensuring the index does not exceed the total count
     setStartIndex((prevIndex) =>
-      Math.min(prevIndex + itemsPerPage, brands.length)
+      Math.min(prevIndex + itemsPerPage, brands.length - itemsPerPage)
     );
   };
 
   const handlePrev = () => {
-    // Move to the previous page, ensuring the index does not go below 0
     setStartIndex((prevIndex) => Math.max(prevIndex - itemsPerPage, 0));
   };
 
+  // Touch swipe logic for mobile (React.TouchEvent type)
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (sliderRef.current) {
+      sliderRef.current.touchStartX = e.touches[0].clientX;
+    }
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (sliderRef.current && sliderRef.current.touchStartX !== undefined) {
+      const deltaX = e.changedTouches[0].clientX - sliderRef.current.touchStartX;
+      if (deltaX > 50) handlePrev(); // Swipe right
+      if (deltaX < -50) handleNext(); // Swipe left
+      sliderRef.current.touchStartX = undefined; // Reset touchStartX
+    }
+  };
+
   return (
-    <section className="py-16 bg-gray-60">
+    <section className="py-16 bg-gray-60 relative">
       <div className="container mx-auto text-center">
         <div className="mb-8">
           <h2 className="text-2xl font-bold">We Have Driven Impact At</h2>
         </div>
 
-        {/* Slider Container */}
-        <div className="relative overflow-hidden">
-          {/* Left Arrow */}
-          {startIndex > 0 && (
-            <button
-              onClick={handlePrev}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full shadow-md"
-            >
-              &#8592;
-            </button>
-          )}
-
-          {/* Logos */}
-          <div
-            className="flex gap-8 items-center justify-center"
-            style={{ width: '100%' }}
+        {/* Arrows */}
+        {startIndex > 0 && (
+          <button
+            onClick={handlePrev}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden sm:block bg-gray-800 text-white px-3 py-2 rounded-full shadow-md hover:bg-gray-600"
           >
-            {brands
-              .slice(startIndex, startIndex + itemsPerPage)
-              .map((brand, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-4 shadow-lg rounded-lg border border-gray-400 flex items-center justify-center w-[200px] h-[100px] md:w-[200px] md:h-[100px]"
-                >
-                  <Image
-                    src={brand.src}
-                    alt={brand.alt}
-                    className="mx-auto"
-                    width={brand.width}
-                    height={brand.height}
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-              ))}
-          </div>
+            &#8592;
+          </button>
+        )}
 
-          {/* Right Arrow */}
-          {startIndex + itemsPerPage < brands.length && (
-            <button
-              onClick={handleNext}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-full shadow-md"
-            >
-              &#8594;
-            </button>
-          )}
+        {startIndex + itemsPerPage < brands.length && (
+          <button
+            onClick={handleNext}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden sm:block bg-gray-800 text-white px-3 py-2 rounded-full shadow-md hover:bg-gray-600"
+          >
+            &#8594;
+          </button>
+        )}
+
+        {/* Logos with touch events */}
+        <div
+          ref={sliderRef}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          className="flex gap-4 items-center justify-center overflow-hidden"
+        >
+          {brands
+            .slice(startIndex, startIndex + itemsPerPage)
+            .map((brand, index) => (
+              <div
+                key={index}
+                className="bg-white p-4 shadow-lg rounded-lg border border-gray-400 flex items-center justify-center w-[120px] h-[80px] sm:w-[160px] sm:h-[90px] md:w-[200px] md:h-[100px]"
+              >
+                <Image
+                  src={brand.src}
+                  alt={brand.alt}
+                  width={brand.width}
+                  height={brand.height}
+                  className="object-contain"
+                />
+              </div>
+            ))}
         </div>
       </div>
     </section>
