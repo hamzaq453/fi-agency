@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import HeroImg from "../../../public/Hero1.png";
+import Hero from "../../../public/Hero.png";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -57,7 +57,7 @@ export default function HeroSection() {
                 </div>
                 <div className={`lg:w-1/2 flex justify-center lg:justify-end transition-all duration-1000 ease-out transform ${imageVisible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
                     <div className="w-80 h-80 bg-gray-200 rounded-lg flex items-center justify-center transition-transform transform hover:scale-105 duration-300">
-                    <Image src={HeroImg} alt="Hero Image" width={320} height={320} className="object-cover rounded-lg" />
+                    <Image src={Hero} alt="Hero Image" width={320} height={320} className="object-cover rounded-lg" />
                     </div>
                 </div>
             </div>

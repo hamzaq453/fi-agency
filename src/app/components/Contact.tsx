@@ -35,21 +35,21 @@ export default function Contact() {
             <a href="tel:+923204619431" className="flex flex-col items-center">
               <FaPhone className="text-3xl sm:text-4xl text-red-500 mb-2 sm:mb-4 animate-bounce" />
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2 sm:mb-4">Phone</h3>
-              <p className="text-sm sm:text-base text-gray-700">+92 320 4619431</p>
+              <p className="text-sm sm:text-base text-gray-700">Call Now!</p>
             </a>
           </div>
           <div className="bg-gray-100 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:bg-red-50 flex flex-col items-center">
-            <Link href="https://wa.me/923204619431" className="flex flex-col items-center" target="_blank">
+            <Link href="https://wa.me/14198137181" className="flex flex-col items-center" target="_blank">
               <FaWhatsapp className="text-3xl sm:text-4xl text-red-500 mb-2 sm:mb-4 animate-bounce" />
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2 sm:mb-4">WhatsApp</h3>
-              <p className="text-sm sm:text-base text-gray-700">+92 336 5335837</p>
+              <p className="text-sm sm:text-base text-gray-700">+1 419 8137181</p>
             </Link>
           </div>
           <div className="bg-gray-100 p-4 sm:p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:bg-red-50 flex flex-col items-center">
-            <Link href="https://www.instagram.com/fi_marketing_agency?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" className="flex flex-col items-center">
+            <Link href="https://www.instagram.com/fimarketingagency?igsh=cWxqYjFsbWlvZGdp" target="_blank" className="flex flex-col items-center">
               <FaInstagram className="text-3xl sm:text-4xl text-red-500 mb-2 sm:mb-4 animate-bounce" />
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2 sm:mb-4">Instagram</h3>
-              <p className="text-sm sm:text-base text-gray-700">@fi_marketing_agency</p>
+              <p className="text-sm sm:text-base text-gray-700">@fimarketingagency</p>
             </Link>
           </div>
         </div>

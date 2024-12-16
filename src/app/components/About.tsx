@@ -5,7 +5,7 @@ import { FaBullseye, FaRocket, FaChartLine, FaHandshake } from 'react-icons/fa';
 export default function About() {
     return (
         <section id="about" className="py-20 bg-white">
-            <div className="container mx-auto px-8 lg:px-16">
+            <div className="container mx-auto w-[90%] px-8 lg:px-16">
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4">About Us</h2>
@@ -15,7 +15,7 @@ export default function About() {
                 {/* Content */}
                 <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-16">
                     {/* Left Side - About Text */}
-                    <div className="lg:w-1/2 text-gray-600 space-y-6">
+                    <div className="lg:w-1/2 text-black space-y-6">
                         <p className="text-lg leading-relaxed">
                             FI Marketing Agency offers comprehensive marketing solutions, creative campaigns, and innovative strategies to boost brand awareness and drive measurable results. With a deep expertise in digital technologies and multi-channel advertising, we engage audiences and elevate businesses&apos; online presence effectively.
                         </p>
@@ -26,7 +26,7 @@ export default function About() {
 
                     {/* Right Side - Points with Icons */}
                     <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div className="flex items-center space-x-4 p-4 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
+                        <div className="flex items-center space-x-4 border p-4 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
                             <FaRocket className="text-red-500 text-4xl" />
                             <div>
                                 <h4 className="font-semibold text-gray-800">Strategic Visionaries</h4>
@@ -34,7 +34,7 @@ export default function About() {
                             </div>
                         </div>
 
-                        <div className="flex items-center space-x-4 p-4 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
+                        <div className="flex items-center space-x-4 p-4 border rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
                             <FaBullseye className="text-red-500 text-4xl" />
                             <div>
                                 <h4 className="font-semibold text-gray-800">Results-Driven Approach</h4>
@@ -42,7 +42,7 @@ export default function About() {
                             </div>
                         </div>
 
-                        <div className="flex items-center space-x-4 p-4 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
+                        <div className="flex items-center space-x-4 p-4 border rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
                             <FaChartLine className="text-red-500 text-4xl" />
                             <div>
                                 <h4 className="font-semibold text-gray-800">Multi-Channel Mastery</h4>
@@ -50,7 +50,7 @@ export default function About() {
                             </div>
                         </div>
 
-                        <div className="flex items-center space-x-4 p-4 rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
+                        <div className="flex items-center space-x-4 p-4 border rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100 transition duration-200">
                             <FaHandshake className="text-red-500 text-4xl" />
                             <div>
                                 <h4 className="font-semibold text-gray-800">Client-Centric Collaboration</h4>
